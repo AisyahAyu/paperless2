@@ -37,10 +37,19 @@
             label13 = new Label();
             label12 = new Label();
             panel7 = new Panel();
+            back = new PictureBox();
+            hapus = new PictureBox();
+            color = new PictureBox();
+            fullcircle = new PictureBox();
+            Fullpersegi = new PictureBox();
+            fullsegitiga = new PictureBox();
+            eraser = new PictureBox();
+            segitiga = new PictureBox();
+            garis = new PictureBox();
+            Persegi = new PictureBox();
             circle = new PictureBox();
             Pen = new PictureBox();
-            panel3 = new Panel();
-            label5 = new Label();
+            Save = new Button();
             pictureBox5 = new PictureBox();
             label15 = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
@@ -72,11 +81,25 @@
             pictureBox1 = new PictureBox();
             textBox11 = new TextBox();
             panel5 = new Panel();
-            pic = new PictureBox();
+            panel2 = new Panel();
+            deletetab = new Button();
+            save1 = new Button();
+            btnNewTab = new Button();
+            trackBar1 = new TrackBar();
+            tabControl1 = new TabControl();
             panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)back).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)hapus).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)color).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)fullcircle).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Fullpersegi).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)fullsegitiga).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)eraser).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)segitiga).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)garis).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Persegi).BeginInit();
             ((System.ComponentModel.ISupportInitialize)circle).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Pen).BeginInit();
-            panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -87,7 +110,8 @@
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pic).BeginInit();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)trackBar1).BeginInit();
             SuspendLayout();
             // 
             // label18
@@ -152,19 +176,150 @@
             // 
             // panel7
             // 
-            panel7.BackColor = Color.LightGray;
+            panel7.BackColor = Color.RosyBrown;
+            panel7.Controls.Add(back);
+            panel7.Controls.Add(hapus);
+            panel7.Controls.Add(color);
+            panel7.Controls.Add(fullcircle);
+            panel7.Controls.Add(Fullpersegi);
+            panel7.Controls.Add(fullsegitiga);
+            panel7.Controls.Add(eraser);
+            panel7.Controls.Add(segitiga);
+            panel7.Controls.Add(garis);
+            panel7.Controls.Add(Persegi);
             panel7.Controls.Add(circle);
             panel7.Controls.Add(Pen);
-            panel7.Location = new Point(507, 709);
+            panel7.Controls.Add(Save);
+            panel7.Location = new Point(454, 417);
             panel7.Name = "panel7";
             panel7.Size = new Size(574, 50);
             panel7.TabIndex = 6;
+            // 
+            // back
+            // 
+            back.Cursor = Cursors.Hand;
+            back.Image = (Image)resources.GetObject("back.Image");
+            back.Location = new Point(435, 3);
+            back.Name = "back";
+            back.Size = new Size(42, 44);
+            back.SizeMode = PictureBoxSizeMode.StretchImage;
+            back.TabIndex = 11;
+            back.TabStop = false;
+            back.Click += back_Click;
+            // 
+            // hapus
+            // 
+            hapus.Cursor = Cursors.Hand;
+            hapus.Image = (Image)resources.GetObject("hapus.Image");
+            hapus.Location = new Point(529, 3);
+            hapus.Name = "hapus";
+            hapus.Size = new Size(42, 44);
+            hapus.SizeMode = PictureBoxSizeMode.StretchImage;
+            hapus.TabIndex = 10;
+            hapus.TabStop = false;
+            hapus.Click += hapus_Click;
+            // 
+            // color
+            // 
+            color.Cursor = Cursors.Hand;
+            color.Image = Properties.Resources.Untitled_design__41_;
+            color.Location = new Point(483, 3);
+            color.Name = "color";
+            color.Size = new Size(42, 44);
+            color.SizeMode = PictureBoxSizeMode.StretchImage;
+            color.TabIndex = 11;
+            color.TabStop = false;
+            color.Click += color_Click;
+            // 
+            // fullcircle
+            // 
+            fullcircle.Cursor = Cursors.Hand;
+            fullcircle.Image = (Image)resources.GetObject("fullcircle.Image");
+            fullcircle.Location = new Point(147, 3);
+            fullcircle.Name = "fullcircle";
+            fullcircle.Size = new Size(42, 44);
+            fullcircle.SizeMode = PictureBoxSizeMode.StretchImage;
+            fullcircle.TabIndex = 9;
+            fullcircle.TabStop = false;
+            fullcircle.Click += fullcircle_Click;
+            // 
+            // Fullpersegi
+            // 
+            Fullpersegi.Cursor = Cursors.Hand;
+            Fullpersegi.Image = (Image)resources.GetObject("Fullpersegi.Image");
+            Fullpersegi.Location = new Point(243, 3);
+            Fullpersegi.Name = "Fullpersegi";
+            Fullpersegi.Size = new Size(42, 44);
+            Fullpersegi.SizeMode = PictureBoxSizeMode.StretchImage;
+            Fullpersegi.TabIndex = 8;
+            Fullpersegi.TabStop = false;
+            Fullpersegi.Click += Fullpersegi_Click;
+            // 
+            // fullsegitiga
+            // 
+            fullsegitiga.Cursor = Cursors.Hand;
+            fullsegitiga.Image = (Image)resources.GetObject("fullsegitiga.Image");
+            fullsegitiga.Location = new Point(339, 3);
+            fullsegitiga.Name = "fullsegitiga";
+            fullsegitiga.Size = new Size(42, 44);
+            fullsegitiga.SizeMode = PictureBoxSizeMode.StretchImage;
+            fullsegitiga.TabIndex = 7;
+            fullsegitiga.TabStop = false;
+            fullsegitiga.Click += fullsegitiga_Click;
+            // 
+            // eraser
+            // 
+            eraser.Cursor = Cursors.Hand;
+            eraser.Image = (Image)resources.GetObject("eraser.Image");
+            eraser.Location = new Point(387, 3);
+            eraser.Name = "eraser";
+            eraser.Size = new Size(42, 44);
+            eraser.SizeMode = PictureBoxSizeMode.StretchImage;
+            eraser.TabIndex = 6;
+            eraser.TabStop = false;
+            eraser.Click += eraser_Click;
+            // 
+            // segitiga
+            // 
+            segitiga.Cursor = Cursors.Hand;
+            segitiga.Image = (Image)resources.GetObject("segitiga.Image");
+            segitiga.Location = new Point(291, 3);
+            segitiga.Name = "segitiga";
+            segitiga.Size = new Size(42, 44);
+            segitiga.SizeMode = PictureBoxSizeMode.StretchImage;
+            segitiga.TabIndex = 5;
+            segitiga.TabStop = false;
+            segitiga.Click += segitiga_Click;
+            // 
+            // garis
+            // 
+            garis.Cursor = Cursors.Hand;
+            garis.Image = (Image)resources.GetObject("garis.Image");
+            garis.Location = new Point(51, 3);
+            garis.Name = "garis";
+            garis.Size = new Size(42, 44);
+            garis.SizeMode = PictureBoxSizeMode.StretchImage;
+            garis.TabIndex = 4;
+            garis.TabStop = false;
+            garis.Click += garis_Click;
+            // 
+            // Persegi
+            // 
+            Persegi.Cursor = Cursors.Hand;
+            Persegi.Image = (Image)resources.GetObject("Persegi.Image");
+            Persegi.Location = new Point(195, 3);
+            Persegi.Name = "Persegi";
+            Persegi.Size = new Size(42, 44);
+            Persegi.SizeMode = PictureBoxSizeMode.StretchImage;
+            Persegi.TabIndex = 3;
+            Persegi.TabStop = false;
+            Persegi.Click += Persegi_Click;
             // 
             // circle
             // 
             circle.Cursor = Cursors.Hand;
             circle.Image = (Image)resources.GetObject("circle.Image");
-            circle.Location = new Point(51, 3);
+            circle.Location = new Point(99, 3);
             circle.Name = "circle";
             circle.Size = new Size(42, 44);
             circle.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -184,23 +339,14 @@
             Pen.TabStop = false;
             Pen.Click += Pen_Click;
             // 
-            // panel3
+            // Save
             // 
-            panel3.BackColor = Color.Gainsboro;
-            panel3.Controls.Add(label5);
-            panel3.Location = new Point(20, 214);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(1404, 79);
-            panel3.TabIndex = 5;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(28, 27);
-            label5.Name = "label5";
-            label5.Size = new Size(59, 25);
-            label5.TabIndex = 4;
-            label5.Text = "Board";
+            Save.Location = new Point(817, 144);
+            Save.Name = "Save";
+            Save.Size = new Size(112, 34);
+            Save.TabIndex = 5;
+            Save.Text = "Save";
+            Save.UseVisualStyleBackColor = true;
             // 
             // pictureBox5
             // 
@@ -223,6 +369,10 @@
             label15.Size = new Size(85, 20);
             label15.TabIndex = 30;
             label15.Text = "Evaluation";
+            // 
+            // timer1
+            // 
+            timer1.Tick += timer1_Tick;
             // 
             // label10
             // 
@@ -521,26 +671,75 @@
             panel5.Size = new Size(175, 59);
             panel5.TabIndex = 24;
             // 
-            // pic
+            // panel2
             // 
-            pic.BackColor = Color.White;
-            pic.Location = new Point(20, 214);
-            pic.Name = "pic";
-            pic.Size = new Size(1404, 545);
-            pic.TabIndex = 31;
-            pic.TabStop = false;
-            pic.Paint += pic_Paint;
-            pic.MouseDown += pic_MouseDown;
-            pic.MouseMove += pic_MouseMove;
-            pic.MouseUp += pic_MouseUp;
+            panel2.BackColor = SystemColors.ActiveCaption;
+            panel2.Controls.Add(deletetab);
+            panel2.Controls.Add(save1);
+            panel2.Controls.Add(btnNewTab);
+            panel2.Controls.Add(trackBar1);
+            panel2.Location = new Point(20, 198);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1416, 548);
+            panel2.TabIndex = 32;
+            // 
+            // deletetab
+            // 
+            deletetab.Location = new Point(1062, 4);
+            deletetab.Name = "deletetab";
+            deletetab.Size = new Size(112, 34);
+            deletetab.TabIndex = 35;
+            deletetab.Text = "Delete Tab";
+            deletetab.UseVisualStyleBackColor = true;
+            deletetab.Click += deletetab_Click;
+            // 
+            // save1
+            // 
+            save1.Location = new Point(1301, 3);
+            save1.Name = "save1";
+            save1.Size = new Size(112, 34);
+            save1.TabIndex = 34;
+            save1.Text = "Save";
+            save1.UseVisualStyleBackColor = true;
+            save1.Click += save1_Click;
+            // 
+            // btnNewTab
+            // 
+            btnNewTab.Location = new Point(1183, 3);
+            btnNewTab.Name = "btnNewTab";
+            btnNewTab.Size = new Size(112, 34);
+            btnNewTab.TabIndex = 33;
+            btnNewTab.Text = "New Tab";
+            btnNewTab.UseVisualStyleBackColor = true;
+            btnNewTab.Click += btnNewTab_Click;
+            // 
+            // trackBar1
+            // 
+            trackBar1.BackColor = Color.LightBlue;
+            trackBar1.Location = new Point(1344, 55);
+            trackBar1.Name = "trackBar1";
+            trackBar1.Orientation = Orientation.Vertical;
+            trackBar1.Size = new Size(69, 221);
+            trackBar1.TabIndex = 3;
+            trackBar1.TickStyle = TickStyle.None;
+            trackBar1.Scroll += trackBar1_Scroll;
+            // 
+            // tabControl1
+            // 
+            tabControl1.Location = new Point(23, 253);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new Size(1410, 493);
+            tabControl1.TabIndex = 31;
+            tabControl1.SelectedIndexChanged += tabControl1_SelectedIndexChanged;
             // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1456, 888);
-            Controls.Add(panel7);
-            Controls.Add(panel3);
+            Controls.Add(tabControl1);
+            Controls.Add(panel2);
             Controls.Add(pictureBox5);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox3);
@@ -549,14 +748,22 @@
             Controls.Add(panel1);
             Controls.Add(panel4);
             Controls.Add(panel5);
-            Controls.Add(pic);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Form3";
             Text = "Form3";
             panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)back).EndInit();
+            ((System.ComponentModel.ISupportInitialize)hapus).EndInit();
+            ((System.ComponentModel.ISupportInitialize)color).EndInit();
+            ((System.ComponentModel.ISupportInitialize)fullcircle).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Fullpersegi).EndInit();
+            ((System.ComponentModel.ISupportInitialize)fullsegitiga).EndInit();
+            ((System.ComponentModel.ISupportInitialize)eraser).EndInit();
+            ((System.ComponentModel.ISupportInitialize)segitiga).EndInit();
+            ((System.ComponentModel.ISupportInitialize)garis).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Persegi).EndInit();
             ((System.ComponentModel.ISupportInitialize)circle).EndInit();
             ((System.ComponentModel.ISupportInitialize)Pen).EndInit();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
@@ -571,7 +778,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pic).EndInit();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)trackBar1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -615,11 +824,25 @@
         private Panel panel5;
         private Label label4;
         private Panel panel9;
-        private Label label5;
         private Panel panel7;
-        private Panel panel3;
-        private PictureBox pic;
         private PictureBox Pen;
         private PictureBox circle;
+        private PictureBox back;
+        private PictureBox hapus;
+        private PictureBox color;
+        private PictureBox fullcircle;
+        private PictureBox Fullpersegi;
+        private PictureBox fullsegitiga;
+        private PictureBox eraser;
+        private PictureBox segitiga;
+        private PictureBox garis;
+        private PictureBox Persegi;
+        private Button Save;
+        private Panel panel2;
+        private Button btnNewTab;
+        private TabControl tabControl1;
+        private TrackBar trackBar1;
+        private Button save1;
+        private Button deletetab;
     }
 }

@@ -49,6 +49,20 @@
       "frameworks": {
         "net9.0-windows7.0": {
           "targetAlias": "net9.0-windows",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.UserSecrets": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            },
+            "NuGet.Frameworks": {
+              "target": "Package",
+              "version": "[6.13.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

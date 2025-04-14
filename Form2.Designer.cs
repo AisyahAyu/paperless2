@@ -68,15 +68,8 @@
             panel10 = new Panel();
             panel8 = new Panel();
             panel2 = new Panel();
+            flowLayoutPanel1 = new FlowLayoutPanel();
             linkLabel1 = new LinkLabel();
-            panel7 = new Panel();
-            label9 = new Label();
-            label7 = new Label();
-            label5 = new Label();
-            panel3 = new Panel();
-            label8 = new Label();
-            label6 = new Label();
-            label4 = new Label();
             Agenda = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -91,8 +84,6 @@
             panel1.SuspendLayout();
             panel18.SuspendLayout();
             panel2.SuspendLayout();
-            panel7.SuspendLayout();
-            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // pictureBox5
@@ -332,6 +323,7 @@
             label15.Size = new Size(85, 20);
             label15.TabIndex = 30;
             label15.Text = "Evaluation";
+            label15.Click += label15_Click;
             // 
             // label14
             // 
@@ -352,6 +344,7 @@
             label13.Size = new Size(58, 20);
             label13.TabIndex = 23;
             label13.Text = "Ballots";
+            label13.Click += label13_Click;
             // 
             // label12
             // 
@@ -446,6 +439,7 @@
             panel13.Name = "panel13";
             panel13.Size = new Size(54, 54);
             panel13.TabIndex = 24;
+            panel13.Paint += panel13_Paint;
             // 
             // panel12
             // 
@@ -464,6 +458,7 @@
             panel11.Name = "panel11";
             panel11.Size = new Size(54, 54);
             panel11.TabIndex = 3;
+            panel11.Paint += panel11_Paint;
             // 
             // panel10
             // 
@@ -486,14 +481,21 @@
             // panel2
             // 
             panel2.BackColor = Color.White;
+            panel2.Controls.Add(flowLayoutPanel1);
             panel2.Controls.Add(linkLabel1);
-            panel2.Controls.Add(panel7);
-            panel2.Controls.Add(panel3);
             panel2.Controls.Add(Agenda);
             panel2.Location = new Point(30, 216);
             panel2.Name = "panel2";
             panel2.Size = new Size(1404, 531);
             panel2.TabIndex = 22;
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.BackColor = Color.Ivory;
+            flowLayoutPanel1.Location = new Point(51, 105);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(1318, 405);
+            flowLayoutPanel1.TabIndex = 4;
             // 
             // linkLabel1
             // 
@@ -502,88 +504,6 @@
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new Size(0, 25);
             linkLabel1.TabIndex = 3;
-            // 
-            // panel7
-            // 
-            panel7.BackColor = Color.LightGray;
-            panel7.Controls.Add(label9);
-            panel7.Controls.Add(label7);
-            panel7.Controls.Add(label5);
-            panel7.Location = new Point(41, 181);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(1320, 77);
-            panel7.TabIndex = 2;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.BackColor = Color.PaleGreen;
-            label9.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.Location = new Point(18, 24);
-            label9.Name = "label9";
-            label9.Size = new Size(24, 27);
-            label9.TabIndex = 5;
-            label9.Text = "2";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.Location = new Point(48, 24);
-            label7.Name = "label7";
-            label7.Size = new Size(104, 27);
-            label7.TabIndex = 4;
-            label7.Text = "Agenda 2";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(1177, 24);
-            label5.Name = "label5";
-            label5.Size = new Size(117, 25);
-            label5.TabIndex = 1;
-            label5.Text = "20:00 - 20:00";
-            // 
-            // panel3
-            // 
-            panel3.BackColor = Color.LightGray;
-            panel3.Controls.Add(label8);
-            panel3.Controls.Add(label6);
-            panel3.Controls.Add(label4);
-            panel3.Location = new Point(41, 85);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(1320, 77);
-            panel3.TabIndex = 1;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.BackColor = Color.PaleGreen;
-            label8.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(18, 25);
-            label8.Name = "label8";
-            label8.Size = new Size(24, 27);
-            label8.TabIndex = 4;
-            label8.Text = "1";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(48, 25);
-            label6.Name = "label6";
-            label6.Size = new Size(104, 27);
-            label6.TabIndex = 3;
-            label6.Text = "Agenda 1";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(1177, 25);
-            label4.Name = "label4";
-            label4.Size = new Size(117, 25);
-            label4.TabIndex = 0;
-            label4.Text = "20:00 - 20:00";
             // 
             // Agenda
             // 
@@ -594,6 +514,10 @@
             Agenda.Size = new Size(165, 51);
             Agenda.TabIndex = 0;
             Agenda.Text = "Agenda";
+            // 
+            // timer1
+            // 
+            timer1.Tick += timer1_Tick_1;
             // 
             // Form2
             // 
@@ -633,10 +557,6 @@
             panel18.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            panel7.ResumeLayout(false);
-            panel7.PerformLayout();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -661,14 +581,6 @@
         private Panel panel1;
         private Panel panel2;
         private Label Agenda;
-        private Panel panel7;
-        private Panel panel3;
-        private Label label4;
-        private Label label7;
-        private Label label5;
-        private Label label8;
-        private Label label6;
-        private Label label9;
         private Panel panel8;
         private LinkLabel linkLabel1;
         private Panel panel13;
@@ -692,5 +604,6 @@
         private Label label17;
         private Label label16;
         private System.Windows.Forms.Timer timer1;
+        private FlowLayoutPanel flowLayoutPanel1;
     }
 }

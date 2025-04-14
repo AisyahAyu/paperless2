@@ -221,6 +221,7 @@
             linkLabel4.TabIndex = 23;
             linkLabel4.TabStop = true;
             linkLabel4.Text = "Ballots";
+            linkLabel4.LinkClicked += linkLabel4_LinkClicked;
             // 
             // linkLabel3
             // 
@@ -290,6 +291,7 @@
             gambar9.Size = new Size(155, 164);
             gambar9.TabIndex = 7;
             gambar9.TabStop = false;
+            gambar9.Click += gambar9_Click;
             // 
             // gambar8
             // 
@@ -309,6 +311,7 @@
             gambar4.SizeMode = PictureBoxSizeMode.StretchImage;
             gambar4.TabIndex = 5;
             gambar4.TabStop = false;
+            gambar4.Click += gambar4_Click;
             // 
             // gambar3
             // 
@@ -319,6 +322,7 @@
             gambar3.SizeMode = PictureBoxSizeMode.StretchImage;
             gambar3.TabIndex = 4;
             gambar3.TabStop = false;
+            gambar3.Click += gambar3_Click;
             // 
             // gambar7
             // 
@@ -337,6 +341,7 @@
             gambar6.Size = new Size(155, 164);
             gambar6.TabIndex = 2;
             gambar6.TabStop = false;
+            gambar6.Click += gambar6_Click;
             // 
             // gambar2
             // 
