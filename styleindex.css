@@ -1,0 +1,320 @@
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Navbar Styles */
+.navbar {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  z-index: 1001;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+}
+
+.logo {
+  width: 120px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.menu a:hover {
+  background: white;
+  color: #333;
+}
+
+/* Search Form */
+.example {
+  display: flex;
+  border-radius: 4px;
+  overflow: hidden;
+  max-width: 200px;
+  width: 100%;
+}
+
+.example input[type="text"] {
+  padding: 8px 12px;
+  border: none;
+  flex: 1;
+  min-width: 0;
+}
+
+.example button {
+  padding: 8px 16px;
+  border: none;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.example button:hover {
+  background: #333;
+  color: white;
+}
+
+.tombol {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* Slideshow Styles */
+.slideshow-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.mySlides {
+  width: 100%;
+  height: 100%;
+}
+
+.mySlides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Projects Section */
+.projects-section {
+  padding: 40px 15px;
+  background: white;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 0 15px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-image {
+  position: relative;
+  padding-top: 66.67%;
+}
+
+.project-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 15px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 5px 0;
+  }
+
+  .logo {
+    width: 100px;
+    height: 50px;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    padding: 10px 0;
+    gap: 5px;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .menu.aktif {
+    display: flex;
+  }
+
+  .menu li {
+    width: 100%;
+  }
+
+  .menu a {
+    display: block;
+    padding: 12px 16px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .tombol {
+    display: block;
+    order: 1;
+  }
+
+  .example {
+    order: 0;
+    max-width: 150px;
+  }
+
+  .example input[type="text"] {
+    font-size: 14px;
+  }
+
+  .example button {
+    padding: 8px;
+  }
+
+  .slideshow-container {
+    height: 60vh;
+  }
+
+  .prev, .next {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .section-header {
+    margin-bottom: 20px;
+  }
+
+  .section-header h2 {
+    font-size: 24px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  .project-image {
+    padding-top: 56.25%;
+  }
+
+  .project-title {
+    font-size: 18px;
+  }
+
+  .project-description {
+    font-size: 14px;
+  }
+
+  .project-tags {
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+    width: 80px;
+    height: 40px;
+  }
+
+  .example {
+    max-width: 120px;
+  }
+
+  .slideshow-container {
+    height: 50vh;
+  }
+
+  .section-header h2 {
+    font-size: 20px;
+  }
+
+  .project-content {
+    padding: 10px;
+  }
+}
+
+/* Touch Device Optimization */
+@media (hover: none) {
+  .menu a:hover {
+    background: none;
+  }
+
+  .project-card:hover {
+    transform: none;
+  }
+
+  .project-card:hover .project-image img {
+    transform: none;
+  }
+
+  .tag:hover {
+    background: #f5f5f5;
+    color: #333;
+  }
+}
